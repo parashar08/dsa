@@ -5,9 +5,11 @@ void printAllDivisor(int n) {
     vector<int> ls;
 
     for (int i=1; i*i<=n; i++) {
-        ls.push_back(i);
-        if (i != (n/i)) {
-            ls.push_back(n/i);
+        if (n % i == 0) {
+            ls.push_back(i);
+            if (i != n/i) {
+                ls.push_back(n/i);
+            }
         }
     }
 
